@@ -1,0 +1,85 @@
+<html ng-app="TheNicestWebApp">
+<head>
+    <title>TheNicestWebApp</title>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <base href="/" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body ng-controller="AccountController as account" class="background">
+    <script>
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    <div class="container">
+        <h3 id="name">
+            <b>Lesley Wayne</b>
+            <span style="font-size:30px;cursor:pointer; float: right; padding-bottom:100px;" onclick="openNav()">&#9776;</span>
+
+        </h3>
+
+        <div id="myNav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="/whoami">Who am I</a>
+
+            <a href="/secret">Secret</a>
+            <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
+            <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
+
+
+            <div ng-show="account.isLoggedIn()">
+                [{{account.getUserName()}}]
+            </div>
+
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "250px";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0";
+            }
+        </script>
+        <hr />
+
+        <ui-view></ui-view>
+    </div>
+
+    <!-- Library Files -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- App Files-->
+    <script src="/ngapp/app.js"></script>
+    <script src="/ngapp/controllers/controllers.js"></script>
+    <script src="/ngapp/services/services.js"></script>
+
+
+    <!-- Security -->
+    <script src="/ngapp/controllers/accountcontroller.js"></script>
+    <script src="/ngapp/services/accountservice.js"></script>
+
+</body>
+</html>

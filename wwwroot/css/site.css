@@ -1,0 +1,138 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption {
+    z-index: 10 !important;
+}
+
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        z-index: 10 !important;
+    }
+}
+
+#about {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    background-color: darkgray;
+    align-items: center;
+    color: lightgray;
+
+}
+
+.ty{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+}
+#name {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+   
+}
+.contact{
+    background-color: slategray;
+    height: 460px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.header{
+    background-color:lightblue;
+    padding: 5px 5px 5px 36px;
+    margin: auto;
+}
+.you {
+    background-color: slategray;
+}
+.icon {
+    font-family: Webdings;
+   font-size: 80px;
+   width: -15px;
+   margin: auto;
+   padding: -50px;
+ 
+}
+.email {
+    color:lightgrey;
+    font-size: 15px;
+}.phone {
+     color:lightgrey;
+     font-size: 15px;
+ }
+.background{
+    background-color: beige;
+}
+.thirds{
+   padding: 32px;
+
+}
+.name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: black;
+    padding-left: -20px;
+    margin: auto;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px; 
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

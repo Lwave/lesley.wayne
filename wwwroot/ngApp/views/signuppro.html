@@ -1,0 +1,30 @@
+﻿<h2>Sign Up!</h2>
+<h3>Please supply me with some information</h3>
+<h2>Part 1</h2>
+<div class="row">
+    
+    <form ng-submit="controller.save()">
+        <input type="text" placeholder="First Name" ng-model="controller.person.firstName" required />
+        <input type="text" placeholder="Last Name" ng-model="controller.person.lastName" required />
+        <br />
+        <h3>Please entail what you want in a website. i.e., for work, etc.</h3>
+        <textarea ng-model="controller.person.description"></textarea>
+        <br />
+        <p>
+            <label for="type">Type:</label>
+            <select id="type">
+                <option ng-model="controller.person.type">Basic</option>
+                <option ng-model="controller.person.type">Pro</option>
+            </select>
+        </p>
+        <input type="submit" value="Save" class="btn btn-info" />
+    </form>
+    <h2>Part 2</h2>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="S9PFHAZXDXHT6">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    </div>
